@@ -5,6 +5,7 @@ import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import Switch from 'react-bootstrap/esm/Switch';
 
 
 const client = new ApolloClient({
@@ -25,13 +26,16 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
-          <Navbar />
-          <div className="container">
+        <Routes>
+        <Navbar />
+
+        <Switch>
             <Route exact path="/" component={SearchBooks}/>
             <Route exact path="/saved" component={SavedBooks}/>
-          </div>
-        </div>
+          </Switch>
+        </Routes>
+          
+        
       </Router>
     </ApolloProvider>
               
