@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-
+ // Added mutation.js to client\src\utils\queries.js
 
 export const GET_ME = gql`
     {
