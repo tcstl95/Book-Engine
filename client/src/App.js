@@ -26,9 +26,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Switch>
+        
         <Navbar />
-
+        <Switch>
+    
         <Routes>
             <Route exact path="/" element={SearchBooks}/>
             <Route exact path="/saved" element={SavedBooks}/>
@@ -38,9 +39,8 @@ function App() {
             />
           </Routes>
         </Switch>
-          
-        
-      </Router>
+  
+          </Router>
     </ApolloProvider>
               
   );
